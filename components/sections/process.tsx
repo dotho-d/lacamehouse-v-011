@@ -27,11 +27,10 @@ const stepVariants = {
 const steps: Step[] = [
   {
     id: 1,
-    title: "Crée un profil qui te ressemble",
+    title: "Crée ton profil",
     description: [
-      "Créer ton profil te permettra de profiter au mieux des fonctionnalités offertes par la Camé House.",
       "Complète ton profil avec tes informations personnelles.",
-      "Notre solution conserve tes informations personnelles en tout sécurité, garantit leur confidentialité, et te permet te rester anonyme."
+      "Notre solution conserve tes informations personnelles en toute sécurité, garantit leur confidentialité, et te permet te rester anonyme."
     ],
     icon: <div className="w-12 h-12 rounded-full bg-[#D4A676] flex items-center justify-center text-2xl text-[#0E232E] font-semibold">1</div>
   },
@@ -39,8 +38,6 @@ const steps: Step[] = [
     id: 2,
     title: "Évalue ta situation",
     description: [
-      "1. Identifie à quel point ton comportement impacte ton quotidien ;",
-      "2. Identifie les facteurs qui ont pu t'amener à ce niveau d'usage ;",
       "Réponds aux questions en étant le plus honnête possible.",
       "Tu obtiendras alors un compte rendu de ton évaluation."
     ],
@@ -48,13 +45,12 @@ const steps: Step[] = [
   },
   {
     id: 3,
-    title: "Définis un objectif",
+    title: "Définis ton objectif",
     description: [
       "Définir un objectif, c'est choisir sa destination.",
-      "Des propositions te seront faites, jusqu'à ce que tu te trouves une destination qui te convienne réellement.",
       "L'arrêt définitif n'est qu'une option ... Il en existe pleins d'autres !",
-      "Laisses l'expérience des autres et les résultats de recherches scientifiques décider du meilleur pour toi, en fonction de ta situation.",
-      "Tu obtiendras alors la synthèse de tes objectifs personnalisés."
+      "On génère une liste d'objectifs basée sur ta situation. Modifie la en fonction de tes préférences.",
+      "Tu obtiendras alors un compte rendu des objectifs à atteindre, avec une échéance."
     ],
     icon: <div className="w-12 h-12 rounded-full bg-[#D4A676] flex items-center justify-center text-2xl text-[#0E232E] font-semibold">3</div>
   },
@@ -63,8 +59,7 @@ const steps: Step[] = [
     title: "Définis un plan d'action",
     description: [
       "Définir un plan d'action, c'est organiser les actions qui te permettront d'atteindre ta destination !",
-      "Des propositions te seront faites, jusqu'à ce que tu trouves un plan d'action qui te convienne réellement.",
-      "Laisses l'expérience des autres et les résultats de recherches scientifiques décider du meilleur pour toi, en fonction de ta situation et de tes objectifs.",
+      "On génère une liste d'actions à mettre en place, basée sur ta situation. Modifie la en fonction de tes préférences.",
       "Tu obtiendras alors ton plan d'action personnalisé."
     ],
     icon: <div className="w-12 h-12 rounded-full bg-[#D4A676] flex items-center justify-center text-2xl text-[#0E232E] font-semibold">4</div>
@@ -73,9 +68,8 @@ const steps: Step[] = [
     id: 5,
     title: "Gamifie ton évolution",
     description: [
-      "De retour sur le tableau de bord, tu pourras constater du changement :",
       "C'est officiel, la partie vient de commencer, tu as rejoins l'aventure !",
-      "Gagne de l'expérience en effectuant des quêtes, et mets en jeu ta discipline pour débloquer des récompenses.",
+      "Gagne de l'expérience en effectuant des quêtes, mets en jeu ta discipline pour débloquer des récompenses.",
       "Et finis en une bonne fois pour toute avec tes addictions !"
     ],
     icon: <div className="w-12 h-12 rounded-full bg-[#D4A676] flex items-center justify-center text-2xl text-[#0E232E] font-semibold">5</div>
@@ -150,7 +144,7 @@ export default function Process() {
                       {/* Contenu à gauche */}
                       <div className="flex justify-end pr-16">
                         <div className="max-w-[450px]">
-                          <h3 className="text-[var(--font-size-habibi-h3)] font-heading mt-6 mb-4">{step.title}</h3>
+                          <h3 className={`text-[var(--font-size-habibi-h3)] font-heading mt-6 mb-4 ${index === 0 || index === 2 || index === 4 ? 'text-right' : ''}`}>{step.title}</h3>
                           <div className="space-y-4">
                             {step.description.map((text, i) => (
                               <p key={i} className="text-foreground/80">{text}</p>
