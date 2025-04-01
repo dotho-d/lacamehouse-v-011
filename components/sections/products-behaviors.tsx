@@ -10,14 +10,13 @@ import CannabisIcon from '@/assets/icones/cannabis-white.svg';
 import ClopeIcon from '@/assets/icones/clope-white.svg';
 import DependanceAffectiveIcon from '@/assets/icones/dependance-affective-white.svg';
 import GamblingIcon from '@/assets/icones/gambling-white.svg';
-import InstaIcon from '@/assets/icones/insta-white.svg';
-import NpsIcon from '@/assets/icones/nps-white.svg';
-import PsycheIcon from '@/assets/icones/psyche-white.svg';
 import SexIcon from '@/assets/icones/sex-white.svg';
 import SportsIcon from '@/assets/icones/sports-white.svg';
-import TiktokIcon from '@/assets/icones/tiktok-white.svg';
 import TravailIcon from '@/assets/icones/travail-white.svg';
 import VideoGamesIcon from '@/assets/icones/video-games-white.svg';
+import NpsIcon from '@/assets/icones/nps-white.svg';
+import PsycheIcon from '@/assets/icones/psyche-white.svg';
+import SocialMediaIcon from '@/assets/icones/reseaux-sociaux.svg';
 
 const iconConfigs = {
   sports: { viewBox: "0 0 675 675" },
@@ -49,8 +48,7 @@ const substances = [
 
 const behaviors = [
   { icon: <VideoGamesIcon className="w-12 h-12" viewBox={iconConfigs.videoGames.viewBox} preserveAspectRatio="xMidYMid meet" />, name: "Jeux vidéo", rotate: getRandomRotation() },
-  { icon: <InstaIcon className="w-12 h-12" viewBox="0 0 120 120" preserveAspectRatio="xMidYMid meet" />, name: "Instagram", rotate: getRandomRotation() },
-  { icon: <TiktokIcon className="w-12 h-12" viewBox="0 0 120 120" preserveAspectRatio="xMidYMid meet" />, name: "TikTok", rotate: getRandomRotation() },
+  { icon: <SocialMediaIcon className="w-12 h-12" viewBox="0 0 105 105" preserveAspectRatio="xMidYMid meet" />, name: "Réseaux sociaux", rotate: getRandomRotation() },
   { icon: <GamblingIcon className="w-14 h-14" viewBox={iconConfigs.gambling.viewBox} preserveAspectRatio="xMidYMid meet" />, name: "Jeux d'argent", rotate: getRandomRotation() },
   { icon: <DependanceAffectiveIcon className="w-12 h-12" viewBox={iconConfigs.dependanceAffective.viewBox} preserveAspectRatio="xMidYMid meet" />, name: "Dépendance affective", rotate: getRandomRotation() },
   { icon: <SexIcon className="w-12 h-12" viewBox="0 0 120 120" preserveAspectRatio="xMidYMid meet" />, name: "Sexe", rotate: getRandomRotation() },
